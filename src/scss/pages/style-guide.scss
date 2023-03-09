@@ -1,0 +1,597 @@
+// Initialize first
+@import '../init';
+
+// Add your style here
+
+// Navbar
+.navbar-style-guide {
+  position: relative;
+}
+
+// Content Styling
+.style-page {
+  position: relative;
+  z-index: 1000;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  .style-page-content {
+    padding-top: 104px;
+    padding-bottom: 312px;
+
+    .style-guide-wrap {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  // Background Shade for Mobile View
+  .sg-bg-fade-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 152px;
+    background-image: linear-gradient(0deg, #1455c0 -218.75%, rgba(20, 85, 192, 0) 100%);
+    animation: slideToTop 2s;
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  // Sidebar
+  .style-guide-sidebar {
+    position: sticky;
+    top: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 96vh;
+    animation: slideToRight 2s;
+
+    @include media-breakpoint-down(lg) {
+      width: 35%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      z-index: 2;
+      width: 90%;
+      background-color: $color-white;
+      box-shadow: $shadow-md;
+      height: auto;
+      border-radius: 10px;
+      top: unset;
+      bottom: 32px;
+      animation: slideToTop 0.4s;
+      display: none;
+    }
+
+    // Sidebar Icon Menu
+    .sg-tabs-nav {
+      @include media-breakpoint-down(sm) {
+        background-color: $color-extra-light-deep-blue;
+        &.active {
+          background-image: $gradient-blue;
+
+          .sg-tabs-nav__icon {
+            background: $color-white;
+          }
+        }
+      }
+      // Icon Wrapper
+      .sg-icon-wrap {
+        background-image: $gradient-blue;
+        border-radius: 10px;
+        width: 48px;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-down(sm) {
+          background: none;
+        }
+      }
+
+      // Sidebar Icon Settings
+      &__icon {
+        width: 28px;
+        aspect-ratio: 1 / 1;
+        background-color: $color-white;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        @include media-breakpoint-up(sm) {
+          background: $color-white;
+        }
+
+        &--color {
+          mask-image: url('../../media/images/SG-color-icon.svg');
+        }
+
+        &--typho {
+          mask-image: url('../../media/images/SG-typhography-icon.svg');
+        }
+
+        &--icon {
+          mask-image: url('../../media/images/SG-icon-icon.svg');
+        }
+
+        &--button {
+          mask-image: url('../../media/images/SG-button-icon.svg');
+        }
+      }
+    }
+
+    // Sidebar Title
+    &__title {
+      padding-left: 8px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid $color-lighter-grey;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    // Sidebar Menu
+    &__menu {
+      margin-top: 32px;
+      margin-bottom: 72px;
+
+      @include media-breakpoint-down(sm) {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin: 14.5px 12px;
+        gap: 35px !important;
+      }
+
+      @include media-breakpoint-down(xs-2) {
+        gap: 20px !important;
+      }
+
+      @include media-breakpoint-down(xs-1) {
+        gap: 0 !important;
+      }
+
+      // Sidebar Menu Text
+      .sg-sidebar-menu-text {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    // Sidebar Button
+    &__button-btn {
+      width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  // Main Content
+  .style-guide-content {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 76%;
+    background-color: $color-white;
+    box-shadow: $shadow-lg;
+    animation: slideToLeft 2s;
+
+    @include media-breakpoint-down(lg) {
+      width: 65%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 90%;
+    }
+
+    // Universal Heading for Each Section
+    &__heading {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 40px;
+      background-color: $color-extra-light-purple;
+      text-transform: capitalize;
+      color: $color-black;
+    }
+
+    // Universal Sub Heading for Each Section
+    &__sub-heading {
+      text-transform: capitalize;
+      color: $color-black;
+    }
+  }
+
+  // Style Main Content Header Section
+  .style-guide-content-header {
+    position: relative;
+    padding: 64px 40px;
+    color: $color-white;
+    background-image: $gradient-blue;
+    overflow: hidden;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    // Header Ornament Background
+    &__ornament {
+      position: absolute;
+      left: -164px;
+      top: -59px;
+      width: 1100px;
+      aspect-ratio: 2.58 / 1;
+      z-index: -1;
+    }
+
+    // Header Paragraph
+    &__para {
+      margin-top: 8px;
+      margin-bottom: 40px;
+    }
+  }
+
+  // Style Main Content Color Section
+  .style-guide-content-color {
+    margin-bottom: 64px;
+
+    .style-guide-content__sub-heading {
+      margin-bottom: 36px;
+    }
+
+    .style-guide-content-color-container {
+      margin-top: 56px;
+      padding: 0 40px;
+    }
+
+    .style-guide-content-color-container:nth-child(2) {
+      margin-top: 36px;
+    }
+
+    .style-guide-content-color-block-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-gap: 24px;
+
+      @include media-breakpoint-down(lg) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    // Title for Every Spesific Color Name (Dark Purp, Light Purp, etc)
+    &__title {
+      margin: 16px;
+      margin-bottom: 4px;
+      color: $color-black;
+    }
+
+    // Set for Color Code
+    &__color-code {
+      margin: 16px;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    // Set Color Box Container
+    &--color {
+      height: 140px;
+
+      @include media-breakpoint-down(lg) {
+        height: 160px;
+      }
+    }
+
+    &__block {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: $shadow-sm;
+    }
+
+    // Each Block for Color Settings
+    &__block-1 {
+      grid-column: span 2;
+
+      &--color-purple {
+        background-color: $color-dark-purple;
+      }
+
+      &--color-blue {
+        background-color: $color-dark-blue;
+      }
+
+      &--color-deep-blue {
+        background-color: $color-dark-deep-blue;
+      }
+
+      &--color-neutral {
+        background-color: $color-black;
+      }
+
+      &--color-yellow {
+        background-color: $color-dark-yellow;
+      }
+
+      &--color-red {
+        background-color: $color-dark-red;
+      }
+
+      &--color-green {
+        background-color: $color-dark-green;
+      }
+
+      &--color-gradient {
+        background-image: $gradient-purple;
+      }
+    }
+
+    &__block-2 {
+      grid-column: span 2;
+
+      &--color-purple {
+        background-color: $color-purple;
+      }
+
+      &--color-blue {
+        background-color: $color-blue;
+      }
+
+      &--color-deep-blue {
+        background-color: $color-deep-blue;
+      }
+
+      &--color-neutral {
+        background-color: $color-grey;
+      }
+
+      &--color-yellow {
+        background-color: $color-yellow;
+      }
+
+      &--color-red {
+        background-color: $color-red;
+      }
+
+      &--color-green {
+        background-color: $color-green;
+      }
+
+      &--color-gradient {
+        background-image: $gradient-blue;
+      }
+    }
+
+    &__block-3 {
+      grid-column: span 2;
+
+      &--color-purple {
+        background-color: $color-light-purple;
+      }
+
+      &--color-blue {
+        background-color: $color-light-blue;
+      }
+
+      &--color-deep-blue {
+        background-color: $color-light-deep-blue;
+      }
+
+      &--color-neutral {
+        background-color: $color-light-grey;
+      }
+
+      &--color-yellow {
+        background-color: $color-light-yellow;
+      }
+
+      &--color-red {
+        background-color: $color-light-red;
+      }
+
+      &--color-green {
+        background-color: $color-light-green;
+      }
+
+      &--color-gradient {
+        background-image: $gradient-background;
+      }
+    }
+
+    &__block-4 {
+      grid-column: span 3;
+
+      &--color-purple {
+        background-color: $color-lighter-purple;
+      }
+
+      &--color-blue {
+        background-color: $color-lighter-blue;
+      }
+
+      &--color-deep-blue {
+        background-color: $color-lighter-deep-blue;
+      }
+
+      &--color-neutral {
+        background-color: $color-lighter-grey;
+      }
+
+      &--color-yellow {
+        background-color: $color-lighter-yellow;
+      }
+
+      &--color-red {
+        background-color: $color-lighter-red;
+      }
+
+      &--color-green {
+        background-color: $color-lighter-green;
+      }
+    }
+
+    &__block-5 {
+      grid-column: span 3;
+
+      &--color-purple {
+        background-color: $color-extra-light-purple;
+      }
+
+      &--color-blue {
+        background-color: $color-extra-light-blue;
+      }
+
+      &--color-deep-blue {
+        background-color: $color-extra-light-deep-blue;
+      }
+
+      &--color-neutral {
+        background-color: $color-white;
+      }
+
+      &--color-yellow {
+        background-color: $color-extra-light-yellow;
+      }
+
+      &--color-red {
+        background-color: $color-extra-light-red;
+      }
+
+      &--color-green {
+        background-color: $color-extra-light-green;
+      }
+    }
+  }
+
+  // Style Main Content Typhography Section
+  .style-guide-content-typho {
+    .style-guide-content-typho-container {
+      margin-top: 64px;
+      color: $color-black;
+      padding: 0 40px;
+    }
+
+    .style-guide-content__sub-heading {
+      margin-bottom: 56px;
+    }
+
+    .style-guide-content-heading-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $color-lighter-grey;
+      margin-bottom: 40px;
+
+      // Styling for Heading Mobile
+      .style-guide-heading-mobile {
+        h1 {
+          font-size: toRem(40);
+          line-height: 1.1;
+        }
+
+        h2 {
+          font-size: toRem(32);
+          line-height: 1;
+        }
+
+        h3 {
+          font-size: toRem(24);
+          line-height: 1.1;
+        }
+
+        h4 {
+          font-size: toRem(20);
+          line-height: 1.1;
+        }
+      }
+
+      // Styling for Body Typhography
+      .style-guide-body-typho {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      // Styling Universal Span only for Typhography
+      span {
+        color: $color-light-grey;
+      }
+    }
+  }
+
+  // Style Main Content Icons Section
+  .style-guide-content-icons {
+    .style-guide-content-icons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 36px;
+      margin-bottom: 64px;
+      padding: 0 40px;
+    }
+
+    &__line-1,
+    &__line-2,
+    &__line-3 {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+  }
+
+  // Style Main Content Buttons Section
+  .style-guide-content-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 104px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 30px;
+    }
+
+    .style-guide-content-buttons-wrap {
+      display: flex;
+      flex-direction: row;
+      gap: 96px;
+      align-items: flex-end;
+      padding: 0 40px;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+      }
+
+      .style-guide-content-buttons-contain {
+        color: $color-grey;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+
+        .style-guide-content-buttons-name {
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}

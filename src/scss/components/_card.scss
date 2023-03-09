@@ -1,0 +1,331 @@
+.card {
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+
+  &--social,
+  &--social-2 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    height: max-content;
+    padding: 1.5em;
+  }
+
+  &--article-type-1 {
+    box-shadow: $shadow-md;
+  }
+
+  &--article-type-2 {
+    box-shadow: $shadow-sm;
+  }
+
+  &--article-type-3 {
+    box-shadow: $shadow-md;
+  }
+
+  &--article-type-4 {
+    box-shadow: $shadow-md;
+  }
+
+  &--article-type-5 {
+    box-shadow: $shadow-sm;
+  }
+
+  &--article-type-6 {
+    background-color: transparent;
+  }
+
+  &--article-type-7 {
+    position: relative;
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Set Card that Have an Ornaments
+.card-pattern {
+  position: absolute;
+
+  &--social,
+  &--social-2 {
+    z-index: -1;
+    width: 110%;
+    top: -27px;
+    left: 0;
+  }
+
+  &--type-2 {
+    right: -27px;
+    top: 1px;
+  }
+
+  &--type-7 {
+    z-index: 1;
+    top: 40%;
+    left: 20%;
+    transform: translate(50%, 50%);
+  }
+}
+
+.card-ornament {
+  &--social,
+  &--social-2 {
+    width: 110%;
+    aspect-ratio: 14 / 9;
+  }
+
+  &--type-2 {
+    width: 207px;
+    aspect-ratio: 2.69 / 1;
+  }
+
+  &--type-7 {
+    width: 207px;
+    aspect-ratio: 2.2 / 1;
+  }
+}
+
+// Set Body Container of Card
+.card-body {
+  padding: 0;
+  z-index: 2;
+
+  &--social,
+  &--social-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--type-1 {
+    width: 50.4%;
+    padding: 2.75em;
+    padding-top: 2.875em;
+  }
+
+  &--type-2 {
+    width: 63%;
+    padding: 1.5em;
+  }
+
+  &--type-3 {
+    width: 100%;
+    padding: 2.25em 2.5em;
+
+    @include media-breakpoint-down(sm) {
+      padding: toRem(24) toRem(20);
+    }
+  }
+
+  &--type-4 {
+    width: 100%;
+    padding: 2.25em;
+  }
+
+  &--type-5 {
+    width: 100%;
+    padding: 1.5em;
+  }
+
+  &--type-6 {
+    width: 100%;
+  }
+
+  &--type-7 {
+    width: 100%;
+    padding: 1.5em;
+    padding-top: 0.5em;
+  }
+}
+
+// Set Photo on Article Card
+.card-photo {
+  &--type-1 {
+    width: 49.6%;
+    aspect-ratio: 1.54 / 1;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &--type-2 {
+    width: 37%;
+    aspect-ratio: 0.98 / 1;
+  }
+
+  &--type-3,
+  &--type-4 {
+    width: 100%;
+    aspect-ratio: 1.68 / 1;
+  }
+
+  &--type-5,
+  &--type-6,
+  &--type-7 {
+    width: 100%;
+    aspect-ratio: 1.79 / 1;
+  }
+
+  &--type-7 {
+    clip-path: polygon(0 0, 100% 0, 100% 61.7%, 0 100%);
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Set Icon on Social Card
+.card-icon {
+  width: 64px;
+  aspect-ratio: 1 / 1;
+}
+
+// Set Section Inside Body
+.card-header,
+.card-profile,
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Set Top Section of Article Card
+.card-header {
+  height: 28px;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  background-color: unset;
+}
+
+// Set Profile Section of Article Card
+.card-profile {
+  gap: 0.75em;
+  color: $color-black;
+
+  // for Profile Pic use img-fluid class
+  &__img {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+  }
+  // for Profile Name use text-m-bold
+}
+
+// Set Title of Card
+.card-title {
+  color: $color-dark-blue;
+  margin: 0;
+
+  // Use h4 for social card title
+  &--social,
+  &--social-2 {
+    color: $color-dark-blue;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  // Use h3 for type 1 title
+  &--type-1 {
+    margin-top: toRem(40);
+
+    &:hover {
+      color: $color-purple;
+      cursor: pointer;
+    }
+  }
+
+  // Use h4 for type 2 title
+  &--type-2 {
+    margin-top: 20px;
+    margin-bottom: 0.5em;
+  }
+
+  // Use h3 for type 3 title
+  &--type-3 {
+    margin-top: toRem(24);
+    margin-bottom: toRem(12);
+
+    &:hover {
+      color: $color-purple;
+      cursor: pointer;
+    }
+  }
+
+  // Use h3 for type 4 title
+  &--type-4 {
+    margin-bottom: 0.375em;
+  }
+
+  // Use h4 for type 5 and 6 title
+  &--type-6 {
+    margin-top: 0.83em;
+
+    &:hover {
+      color: $color-purple;
+      cursor: pointer;
+    }
+  }
+
+  // Use h4 for type 7 title
+  &--type-7 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+// Set Paragraph for Card
+.card-text {
+  // Use text-m-regular for social card
+  &--social,
+  &--social-2 {
+    margin-bottom: 3em;
+  }
+
+  // Use text-l-regular for type 1 card
+  &--type-1 {
+    margin-bottom: 2.2em;
+    margin-top: 0.6em;
+    @include text-shorten($line: 2);
+  }
+
+  // Use text-m-regular for type 2 card
+  &--type-2 {
+    @include text-shorten($line: 2);
+  }
+
+  // Use text-m-regular for type 3 and 4 card
+  &--type-3,
+  &--type-4 {
+    margin-bottom: 1.5em;
+    @include text-shorten($line: 2);
+  }
+
+  // Use text-m-regular for type 5 card
+  &--type-5 {
+    margin-top: 0.75em;
+    @include text-shorten($line: 3);
+  }
+
+  // Use text-m-regular for type 6 card
+  &--type-6 {
+    margin-top: 0.5em;
+    margin-bottom: 1.25em;
+    @include text-shorten($line: 3);
+  }
+
+  &--type-7 {
+    @include text-shorten($line: 3);
+  }
+}
+
+// Use This Class for Day Status on Card
+.card-day {
+  color: $color-grey;
+}

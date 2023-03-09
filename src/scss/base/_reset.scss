@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+
+  color: $color-grey;
+  font-family: 'DMSans Regular';
+
+  overflow-x: hidden;
+
+  // For Test, enable this settings
+  // background-color: $color-light-grey;
+}
+
+h1 {
+  font-size: toRem(60);
+  font-family: 'DMSans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(40);
+    line-height: 1.1;
+  }
+}
+
+h2 {
+  font-size: toRem(48);
+  font-family: 'DMSans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(32);
+    line-height: 1;
+  }
+}
+
+h3 {
+  font-size: toRem(32);
+  font-family: 'DMSans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(24);
+    line-height: 1.1;
+  }
+}
+
+h4 {
+  font-size: toRem(24);
+  font-family: 'DMSans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(20);
+    line-height: 1.1;
+  }
+}
+
+p {
+  margin: 0;
+}

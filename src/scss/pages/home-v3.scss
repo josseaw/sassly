@@ -1,0 +1,231 @@
+// Initialize first
+@import "../init";
+
+// Import files
+@import "home";
+
+// Add your style here
+.home {
+  // Version Homepage
+  &--v3 {
+    position: relative;
+    width: 100%;
+
+    @include media-breakpoint-down(xl) {
+      padding: 0px 20px;
+    }
+
+    .header-bg {
+      @include media-breakpoint-down(xl) {
+        height: 100%;
+      }
+    }
+  }
+
+  // Size Section in Homepage
+  &__home-v3 {
+    position: relative;
+    padding-top: 166px;
+    padding-bottom: 80px;
+
+    @include media-breakpoint-down(xl) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // Component Homepage
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 112px;
+
+    @include media-breakpoint-down(xl) {
+      flex-direction: column-reverse;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__form {
+    position: relative;
+    padding: 66px 40px;
+    text-align: center;
+    background: linear-gradient(
+      112.32deg,
+      rgba($color-white, 0.4) 0%,
+      rgba($color-white, 0) 101.12%
+    );
+    border-radius: 20px;
+    backdrop-filter: blur(79.1999px);
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 16px;
+    }
+
+    h3 {
+      color: $color-white;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
+
+    form {
+      .items {
+        margin-top: 12px;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 6px;
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 32px;
+
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &__inputs {
+          background: linear-gradient(
+            83.95deg,
+            rgba(27, 69, 180, 0.4) 3%,
+            rgba(28, 39, 146, 0.4) 96.84%
+          );
+          border: 1px solid $color-light-grey;
+
+          &:hover .items__inputs__img {
+            background-color: $color-white;
+          }
+
+          &__img {
+            background-color: $color-light-grey;
+            mask-image: url("../../media/images/eye-off.svg");
+          }
+          &--input {
+            color: $color-white;
+            &::placeholder {
+              color: $color-light-grey;
+            }
+          }
+        }
+      }
+      p {
+        margin-top: 16px;
+        color: $color-white;
+
+        &:nth-child(4) {
+          margin-bottom: 16px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $color-blue;
+        }
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title-v3 {
+    position: relative;
+    max-width: 543px;
+    padding-top: 33px;
+
+    @include media-breakpoint-down(xl) {
+      text-align: center;
+    }
+
+    h1 {
+      color: $color-white;
+    }
+    p.text-l-regular {
+      color: $color-lighter-grey;
+      margin-top: 24px;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    &__button {
+      position: relative;
+      padding: 16px;
+      border: 1px solid $color-purple;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: 0.5s ease-out;
+
+      &:hover {
+        background: $gradient-purple;
+      }
+      &:hover p.text-l-bold {
+        color: $color-white;
+      }
+
+      &.active {
+        background: $gradient-purple;
+      }
+
+      &__img {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid $color-purple;
+      }
+
+      p.text-l-bold {
+        text-transform: capitalize;
+        color: $color-purple;
+        transition: 0.5s ease-out;
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+
+        &.active {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .flex-v3 {
+    flex-direction: column;
+
+    .card-photo {
+      width: 100%;
+      aspect-ratio: unset;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .card-body--type-2 {
+      width: 100%;
+    }
+    .card-pattern--type-2 {
+      top: 337px;
+    }
+
+    .rounded-start {
+      border-bottom-left-radius: unset !important;
+    }
+  }
+}

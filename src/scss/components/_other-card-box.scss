@@ -1,0 +1,172 @@
+// About Card
+.about-card {
+  position: relative;
+  width: 260px;
+  height: 190px;
+  background: $color-white;
+  border-radius: 10px;
+  padding: 24px;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: $color-dark-blue;
+    text-transform: capitalize;
+  }
+}
+
+.about-center {
+  position: relative;
+  width: 240px;
+  height: 142px;
+  padding: 0px;
+  flex-direction: column;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: $color-dark-blue;
+    text-transform: capitalize;
+  }
+}
+
+// Card Faq
+.card-faq {
+  position: relative;
+  width: 726px;
+  height: 246px;
+  background: $color-white;
+  border-radius: 10px;
+  padding: 48px 64px;
+
+  &__detail {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+// Card List
+.card-list {
+  position: relative;
+  width: 726px;
+  height: 96px;
+  display: flex;
+  padding: 24px 32px;
+  background: $color-white;
+  border-radius: 10px;
+  cursor: pointer;
+  gap: 16px;
+
+  &__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    span {
+      flex: 1;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// Card Company
+.card-company {
+  position: relative;
+  width: 538px;
+  height: 252px;
+  background: $color-white;
+  border-radius: 10px;
+  padding: 24px;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    h3 {
+      flex: 1;
+      color: $color-dark-blue;
+      text-transform: capitalize;
+    }
+  }
+
+  &__profile {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
+
+// Card Office
+.card-office {
+  position: relative;
+  width: 351px;
+  height: 396px;
+  padding: 32px;
+  background: $color-white;
+  border-radius: 10px;
+
+  &__title {
+    text-transform: capitalize;
+    color: $color-dark-deep-blue;
+    margin-top: 24px;
+    margin-bottom: 4px;
+  }
+
+  &__list {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 13px;
+
+    p {
+      font-family: "DMSans Regular";
+      font-size: toRem(16);
+      line-height: 1.4;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+// Card Category
+.card-category {
+  position: relative;
+  width: 351px;
+  height: 320px;
+  padding: 32px;
+  background: $color-white;
+  border-radius: 10px;
+
+  &__title {
+    text-transform: capitalize;
+    color: $color-dark-deep-blue;
+    margin-top: 24px;
+    margin-bottom: 4px;
+  }
+
+  &__detail {
+    color: $color-grey;
+    margin-top: 8px;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 32px;
+  }
+}

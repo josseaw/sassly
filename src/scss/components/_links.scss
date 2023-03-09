@@ -1,0 +1,40 @@
+// Always use class text-m-bold for links
+// Image must be .svg to work properly
+.link {
+  text-decoration: none;
+  color: $color-dark-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  width: fit-content;
+  transition: 0.2s;
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+    background-color: $color-dark-purple;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-image: url('../../media/images/rarr-purple.svg');
+  }
+
+  &:hover {
+    color: $color-purple;
+
+    .link__icon {
+      background-color: $color-purple;
+    }
+  }
+
+  &--default {
+    &:hover {
+      color: $color-dark-purple;
+      text-decoration: underline;
+    }
+  }
+}

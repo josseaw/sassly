@@ -1,0 +1,234 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'pricing';
+
+// Add your style here
+.pricing-v1 {
+  // Section Hero
+  .hero {
+    .hero-wrap {
+      margin-top: toRem(166);
+      margin-bottom: toRem(80);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: toRem(64);
+
+      @include media-breakpoint-down(md) {
+        margin-top: toRem(136);
+        margin-bottom: toRem(64);
+        gap: toRem(48);
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-inline: toRem(20);
+      }
+
+      .hero__text {
+        text-align: center;
+        max-width: 664px;
+        display: flex;
+        flex-direction: column;
+        gap: toRem(24);
+
+        @include media-breakpoint-down(md) {
+          gap: toRem(16);
+          margin-bottom: toRem(32);
+        }
+
+        h1 {
+          color: $color-white;
+        }
+
+        p {
+          color: $color-lighter-grey;
+        }
+      }
+    }
+  }
+
+  //   Section Testimonials
+  .testimonials {
+    position: relative;
+    //   Pattern Settings
+    .testimonials-pattern {
+      width: 1714.5px;
+      aspect-ratio: 2.1 / 1;
+      position: absolute;
+      background-image: url(../../media/images/pricing-v1-pattern.svg);
+      background-size: cover;
+      background-position: center;
+      top: -16px;
+      left: -57px;
+    }
+    .container {
+      margin-top: toRem(80);
+      margin-bottom: toRem(80);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: toRem(64);
+
+      @include media-breakpoint-down(md) {
+        margin-top: toRem(64);
+        margin-bottom: toRem(64);
+        gap: toRem(56);
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-inline: toRem(20);
+      }
+
+      .header {
+        color: $color-dark-deep-blue;
+      }
+
+      .carousel-testimonials {
+        //   Carousel Customize
+        .carousel {
+          display: flex;
+          flex-direction: column;
+          gap: toRem(40);
+
+          @include media-breakpoint-down(md) {
+            gap: toRem(32);
+          }
+
+          //   Item
+          .carousel-item {
+            .card-testi-wrap {
+              display: flex;
+              flex-direction: row;
+              gap: toRem(24);
+              align-items: center;
+              margin: auto;
+            }
+
+            .card-testi {
+              display: flex;
+              flex-direction: column;
+              gap: toRem(20);
+              padding: toRem(24);
+              background-color: $color-white;
+              box-shadow: $shadow-md;
+
+              // Property for Card Hide
+              &.remove {
+                @include media-breakpoint-down(sm) {
+                  display: none;
+                }
+              }
+
+              .card-header {
+                height: fit-content;
+                justify-content: unset;
+                gap: toRem(12);
+
+                h3 {
+                  color: $color-dark-blue;
+                }
+              }
+
+              .card-body {
+                display: flex;
+                flex-direction: column;
+                gap: toRem(20);
+
+                p {
+                  @include text-shorten($line: 3);
+                }
+
+                .author {
+                  display: flex;
+                  flex-direction: column;
+                  gap: toRem(4);
+
+                  .black {
+                    color: $color-black;
+                  }
+                }
+              }
+            }
+          }
+
+          .carousel-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media-breakpoint-down(sm) {
+              justify-content: center;
+            }
+
+            // Custom Carousel Button
+            .carousel-indicators {
+              position: relative;
+              width: fit-content;
+              margin: 0;
+              margin-bottom: 0;
+              gap: 8px;
+
+              button {
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 12px; /* change width */
+                height: 12px; /* change height */
+                padding: 0;
+                margin-right: 3px;
+                margin-left: 3px;
+                text-indent: -999px;
+                cursor: pointer;
+                background-color: $color-lighter-purple;
+                background-clip: padding-box;
+                border: 0;
+                transition: all 0.6s ease;
+                border-radius: 100%; // /* add border-radius */
+
+                &.active {
+                  background-color: $color-dark-purple !important;
+                }
+              }
+            }
+
+            // Carousel Control Custom
+            .carousel-control {
+              display: flex;
+              flex-direction: row;
+              gap: toRem(16);
+              align-items: center;
+
+              @include media-breakpoint-down(sm) {
+                display: none;
+              }
+
+              .carousel-control-prev,
+              .carousel-control-next {
+                height: fit-content;
+                width: fit-content;
+                position: relative;
+                opacity: 1;
+              }
+
+              // Icon Custom
+              .carousel-control-prev-icon,
+              .carousel-control-next-icon {
+                background-image: url(../../media/images/pricing-v1-carousel-control.svg);
+                background-size: contain;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+              }
+
+              .carousel-control-next-icon {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

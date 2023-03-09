@@ -1,0 +1,130 @@
+.card {
+  &--pricing-1 {
+    box-shadow: $shadow-md;
+    padding: 2em;
+  }
+
+  &--pricing-2 {
+    box-shadow: $shadow-lg;
+    padding: 2em;
+    position: relative;
+  }
+}
+
+// Set Header on Pricing Card
+.card-header {
+  &--pricing-1 {
+    display: block;
+    height: fit-content;
+  }
+}
+
+// Set Header Icon
+.card-icon {
+  &--pricing-1 {
+    width: 40px;
+  }
+}
+
+// Set Badge, use class text-m-bold
+.card-badge {
+  &--pricing-1 {
+    padding: 0.5em 1em;
+  }
+}
+
+// Set Desc Section
+.card-desc {
+  padding-right: 1em;
+}
+
+// Set Title
+.card-title {
+  &--pricing-1 {
+    margin-top: 1.5em;
+  }
+  &--pricing-2 {
+    margin: 0;
+  }
+}
+
+// Set Paragraph on Desc Section
+.card-text {
+  &--pricing-1 {
+    margin-top: 1em;
+    @include text-shorten($line: 2);
+  }
+}
+
+// Set Feature Section
+.card-feature {
+  margin: 2em 0;
+  // padding-right: 5.3em;
+  color: $color-black;
+
+  &__title {
+    margin-bottom: 1.06em;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 0.875em;
+  }
+
+  &--icon {
+    margin-right: 0.5em;
+  }
+}
+
+// Set Price Section
+.card-price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.25em;
+
+  margin-top: 2.06em;
+  margin-bottom: 3em;
+
+  h3 {
+    color: $color-black;
+  }
+}
+
+// Set Bottom on Pricing Card
+.card-footer {
+  display: flex;
+  align-items: center;
+  padding: unset;
+  flex-direction: column;
+  gap: 1.25em;
+  background: unset;
+  border: none;
+}
+
+// Set Button on Pricing Card
+.card-pricing__btn {
+  width: 100%;
+}
+
+// Set Crown Ornament in Pricing Card 2
+.card-crown {
+  width: max-content;
+
+  &__bg {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 145px;
+    aspect-ratio: 1.12 / 1;
+    background-image: $gradient-purple;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+  }
+}

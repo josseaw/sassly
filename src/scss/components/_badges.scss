@@ -1,0 +1,40 @@
+// Use class text-s-regular
+.badge {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 4px 8px;
+  text-align: center;
+
+  //   Badges with color background
+  &--primary-yellow {
+    color: $color-white;
+    background-color: $color-yellow;
+  }
+
+  &--primary-blue {
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  &--primary-green {
+    color: $color-white;
+    background-color: $color-green;
+  }
+
+  //   Badges with color text
+  &--secondary-yellow {
+    background-color: $color-extra-light-yellow;
+    color: $color-yellow;
+  }
+
+  &--secondary-blue {
+    background-color: $color-extra-light-blue;
+    color: $color-blue;
+  }
+
+  &--secondary-green {
+    background-color: $color-extra-light-green;
+    color: $color-green;
+  }
+}

@@ -1,0 +1,239 @@
+// Section CTA Styling
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+
+  &--v1 {
+    background-image: url(../../media/images/CTA-Background-V1.png);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: 5em;
+    padding-bottom: 11.9em;
+  }
+
+  &--v2 {
+    background-image: url(../../media/images/CTA-Background-V2.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: 19.25em;
+    padding-bottom: 17.9em;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 8.75em;
+      padding-bottom: 7.9em;
+      background-position: left;
+    }
+  }
+
+  &--v3,
+  &--subs {
+    background-color: $color-white;
+    padding: 5em 10.625em;
+
+    @include media-breakpoint-down(xl) {
+      padding: 5em 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
+}
+
+// Container CTA Styling
+.container {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  align-items: center;
+
+  &--cta-v1 {
+    flex-direction: column;
+    width: 713px;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1.25em;
+    }
+  }
+
+  &--cta-v2 {
+    flex-direction: column;
+    text-align: center;
+    width: 713px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1.25em;
+      padding-top: 8.75em;
+    }
+  }
+
+  &--cta-v3 {
+    padding: 97px 3em;
+    background-color: $color-extra-light-blue;
+    gap: 85px;
+  }
+
+  &--cta-subs {
+    padding: 3em;
+    background-image: $gradient-background;
+    overflow: hidden;
+    gap: 64px;
+  }
+
+  &--cta-v3,
+  &--cta-subs {
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.25em;
+    max-width: 1100px;
+
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+      text-align: center;
+      width: 80%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      border-radius: 0;
+      flex-direction: column;
+      width: 100%;
+      padding: 3.5em 1.25em;
+      gap: 32px;
+    }
+  }
+}
+
+// Individual v3 CTA Styling
+.cta-v3 {
+  &__ornaments {
+    position: absolute;
+    width: 1100px;
+    aspect-ratio: 2.63 / 1;
+    top: 0;
+    left: 0;
+  }
+
+  &--left {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &--right {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+
+// Individual Subscribe CTA Styling
+.cta-subs {
+  &__ornaments {
+    position: absolute;
+    width: 1100px;
+    aspect-ratio: 4.1 / 1;
+    bottom: 0;
+    left: 1px;
+
+    @include media-breakpoint-down(sm) {
+      top: 0;
+      left: -1.25em;
+    }
+  }
+
+  &--left {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &--right {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+
+// CTA Title Styling
+.cta-title {
+  //   Use h2 for title cta
+  &--v1,
+  &--v2,
+  &--v3 {
+    color: $color-dark-deep-blue;
+  }
+
+  &--subs {
+    color: $color-white;
+  }
+}
+
+// CTA Paragraph Styling
+.cta-para {
+  @include text-shorten($line: 2);
+  //   Use class text-l-regular for paragraph
+  &--v1 {
+    max-width: 462px;
+    margin-top: 1.3em;
+    margin-bottom: 2.6em;
+  }
+
+  &--v2 {
+    max-width: 682px;
+    margin-top: 1.3em;
+    margin-bottom: 2.6em;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 0.6em;
+      margin-bottom: 1.3em;
+    }
+  }
+
+  &--v3 {
+    margin-top: 1.6em;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 0.6em;
+    }
+  }
+
+  &--subs {
+    color: $color-white;
+    margin-top: 1.3em;
+    padding-right: 3.6em;
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      margin-top: 0.6em;
+      margin-bottom: 1.7em;
+    }
+  }
+}
+
+// Button Container for V1 CTA
+.cta-btn-container {
+  &--v1 {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+  }
+}

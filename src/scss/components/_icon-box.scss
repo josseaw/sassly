@@ -1,0 +1,240 @@
+// Icon Box
+.icon-large {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__circle {
+    border-radius: 50%;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-lighter-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+  &__box {
+    border-radius: 10px;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-lighter-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+}
+
+.icon-medium {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__circle {
+    border-radius: 50%;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-lighter-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+  &__box {
+    border-radius: 10px;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-lighter-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+}
+
+.icon-small {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__circle {
+    border-radius: 50%;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-light-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+  &__box {
+    border-radius: 10px;
+
+    // Color
+    &--blue {
+      background: $color-blue;
+    }
+    &--l-blue {
+      background: $color-light-blue;
+    }
+    &--el-d-blue {
+      background: $color-extra-light-deep-blue;
+    }
+    &--l-d-blue {
+      background: $color-lighter-deep-blue;
+    }
+    &--white {
+      background: $color-white;
+    }
+    &--grey {
+      background: $color-grey;
+    }
+    &--l-grey {
+      background: $color-lighter-grey;
+    }
+    &--g-backgroud {
+      background: $gradient-background;
+    }
+    &--g-blue {
+      background: $gradient-blue;
+    }
+    &--g-purple {
+      background: $gradient-purple;
+    }
+  }
+}

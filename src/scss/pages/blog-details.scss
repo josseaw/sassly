@@ -1,0 +1,209 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'blog';
+
+// Add your style here
+.blog-details {
+  // Hero Section
+  .hero {
+    .hero-wrap {
+      margin-top: toRem(166);
+      margin-bottom: toRem(80);
+      display: flex;
+      flex-direction: column;
+      gap: toRem(48);
+      align-items: center;
+
+      @include media-breakpoint-down(md) {
+        margin-top: toRem(136);
+        margin-bottom: toRem(64);
+        gap: toRem(56);
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-inline: toRem(20);
+      }
+
+      .hero-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(24);
+
+        @include media-breakpoint-down(md) {
+          gap: toRem(16);
+        }
+
+        h1 {
+          color: $color-white;
+          max-width: 823px;
+        }
+
+        p {
+          color: $color-lighter-grey;
+          max-width: 467px;
+        }
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(48);
+
+        @include media-breakpoint-down(md) {
+          gap: toRem(32);
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-inline: toRem(-20);
+        }
+
+        img {
+          width: 100%;
+          aspect-ratio: 2 / 1;
+        }
+
+        .content-inner {
+          padding-inline: toRem(93);
+          display: flex;
+          flex-direction: column;
+          gap: toRem(44);
+
+          @include media-breakpoint-down(md) {
+            padding-inline: unset;
+            gap: toRem(32);
+          }
+
+          @include media-breakpoint-down(sm) {
+            padding-inline: toRem(20);
+          }
+
+          .content-blog {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: toRem(24);
+
+            h3 {
+              color: $color-black;
+            }
+          }
+
+          .paragraph {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(18);
+            max-width: 798px;
+
+            @include media-breakpoint-down(md) {
+              gap: toRem(24);
+            }
+
+            .link {
+              display: unset;
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: toRem(18);
+              margin-bottom: 0;
+
+              @include media-breakpoint-down(md) {
+                gap: toRem(12);
+              }
+            }
+          }
+
+          .content-inner-second {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(24);
+
+            .fill-second {
+              display: flex;
+              flex-direction: column;
+              gap: toRem(18);
+              align-items: center;
+              text-align: center;
+
+              img {
+                width: 100%;
+                aspect-ratio: 1.87 / 1;
+                border-radius: toRem(10);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   Articles Section
+  .blog-articles {
+    padding-top: toRem(80);
+    padding-bottom: toRem(80);
+
+    @include media-breakpoint-down(md) {
+      padding-top: toRem(64);
+      padding-bottom: toRem(64);
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-inline: toRem(20);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(66);
+
+      @include media-breakpoint-up(md) {
+        gap: toRem(48);
+      }
+
+      .button-wrap-mobile {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+
+      .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+          justify-content: center;
+          margin-bottom: toRem(8);
+        }
+
+        h2 {
+          color: $color-dark-deep-blue;
+        }
+
+        .button-wrap-desktop {
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+
+      .content {
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 0;
+      }
+    }
+  }
+}

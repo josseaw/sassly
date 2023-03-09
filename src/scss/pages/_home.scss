@@ -1,0 +1,52 @@
+// For global styling on all home pages
+
+// Brand Section
+// Size Section in Homepage
+.home {
+  &--logo {
+    position: relative;
+    padding: 80px 0px;
+
+    @include media-breakpoint-down(xl) {
+      padding: 40px 0px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(md) {
+      gap: 15px;
+      img:last-child {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      align-items: center;
+      grid-column-gap: 15px;
+      grid-row-gap: 20px;
+    }
+
+    @include media-breakpoint-down(xs-2) {
+      gap: 0px;
+      img {
+        transform: scale(0.6);
+        margin: 0px -20px;
+      }
+    }
+
+    @include media-breakpoint-down(xs-1) {
+      img {
+        margin: 0px -27px;
+      }
+    }
+  }
+}

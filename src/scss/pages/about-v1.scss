@@ -1,0 +1,529 @@
+// Initialize first
+@import "../init";
+
+// Import files
+@import "about";
+
+// Add your style here
+
+// Button New Modifier only This Page
+.btn {
+  &--map-accordion {
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+}
+// Content Styling
+.about-page-v1 {
+  -webkit-font-smoothing: antialiased;
+
+  .about-page-v1-content {
+    padding-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      padding-top: 64px;
+    }
+  }
+
+  .about-page {
+    &__heading {
+      text-align: center;
+      color: $color-dark-deep-blue;
+      max-width: 672px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Section Hero Styling
+// Hero Ornament Styling
+.about-hero-section {
+  position: relative;
+
+  .about-hero-ornament {
+    position: absolute;
+    z-index: -1;
+    top: 35rem;
+    right: 0;
+    width: 660px;
+    height: 208px;
+    background-image: url(../../media/images/About-V1-Ornament-Hero.svg);
+    background-size: cover;
+    background-position: bottom center;
+  }
+}
+
+// Hero Content Styling
+.about-hero {
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+  padding: 80px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 64px 0;
+  }
+
+  //   Hero Text
+  .about-hero-text {
+    color: $color-white;
+    max-width: 745px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__sub-heading {
+      max-width: 462px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  //   Hero Image
+  .about-hero-image {
+    &__img {
+      width: 100%;
+      aspect-ratio: 2.75 / 1;
+    }
+    &__img--2 {
+      width: 100%;
+      aspect-ratio: 1.78 / 1;
+    }
+  }
+
+  //   Hero List
+  .about-hero-list-wrap {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 0;
+
+    @include media-breakpoint-down(md) {
+      --bs-gutter-y: 20px;
+    }
+
+    .about-hero-list-stat {
+      .about-hero-list-stat-wrap {
+        border-radius: 10px;
+        padding: 24px;
+        box-shadow: $shadow-sm;
+        background-color: $color-white;
+      }
+      .about-hero-list-stat-wrap--v2 {
+        border-radius: 10px;
+        padding: 24px;
+        box-shadow: $shadow-sm;
+        background-color: $color-white;
+        text-align: center;
+      }
+    }
+  }
+
+  .about-hero-list {
+    &__num {
+      color: $color-black;
+    }
+
+    &__title {
+      color: $color-dark-blue;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+  }
+}
+
+.about-hero-play {
+  position: absolute;
+  top: 43%;
+  left: 47.5%;
+  width: 80px;
+  height: 80px;
+  background: $color-white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @include media-breakpoint-down(lg) {
+    top: 39%;
+  }
+  @include media-breakpoint-down(md) {
+    top: 30%;
+    width: 44px;
+    height: 44px;
+  }
+  @include media-breakpoint-down(sm) {
+    top: 27%;
+  }
+
+  img {
+    margin-left: 5px;
+
+    @include media-breakpoint-down(md) {
+      width: 30%;
+      height: 35%;
+      margin-left: 3px;
+    }
+  }
+}
+
+// Section Value Styling
+// Value Ornament Styling
+.about-value-section {
+  position: relative;
+
+  .about-value-ornament {
+    position: absolute;
+    z-index: -1;
+    top: -1rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 1750px;
+    height: 1200px;
+    background-image: url(../../media/images/About-V1-Ornament-Value.svg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// Value Content Styling
+.about-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 64px 0;
+  }
+
+  .about-value-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    .about-value-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 48px;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+        text-align: center;
+
+        &:nth-child(2) {
+          flex-direction: column;
+        }
+      }
+
+      //   List Text Container
+      .about-value-list-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 32px;
+        width: 46%;
+
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+          align-items: center;
+        }
+
+        .about-value-list-text {
+          display: flex;
+          flex-direction: column;
+          gap: 13px;
+
+          .about-value-list__para {
+            @include media-breakpoint-down(md) {
+              @include text-shorten($line: 3);
+            }
+          }
+        }
+      }
+
+      //   List Image Container
+      .about-value-list-image-container {
+        position: relative;
+        width: 54%;
+
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+        }
+
+        // Container Image
+        .about-value-list-img {
+          &--1,
+          &--3 {
+            img {
+              width: 84%;
+              aspect-ratio: 1.25 / 1;
+              box-shadow: $shadow-md;
+            }
+          }
+
+          &--2 {
+            img {
+              width: 78.3%;
+              aspect-ratio: 1.09 / 1;
+              box-shadow: $shadow-md;
+            }
+          }
+
+          &--3 {
+            position: relative;
+            box-shadow: $shadow-md;
+            width: 500px;
+            aspect-ratio: 1.25 / 1;
+
+            @include media-breakpoint-down(lg) {
+              width: 100%;
+            }
+            img {
+              position: absolute;
+              right: 0;
+              top: 0;
+
+              @include media-breakpoint-down(lg) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+
+        // Float Image
+        .about-value-list-float-img {
+          position: absolute;
+
+          &--1 {
+            box-shadow: $shadow-md;
+            right: 0;
+            bottom: 30px;
+            img {
+              width: 396px;
+              aspect-ratio: 5.21 / 1;
+
+              @include media-breakpoint-down(sm) {
+                width: 222px;
+              }
+            }
+          }
+
+          &--2 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            right: 0;
+            bottom: 20px;
+
+            img {
+              width: 274px;
+              aspect-ratio: 3.61 / 1;
+              box-shadow: $shadow-md;
+
+              @include media-breakpoint-down(sm) {
+                width: 154px;
+              }
+            }
+          }
+
+          &--3 {
+            box-shadow: $shadow-md;
+            left: 0;
+            bottom: 35px;
+
+            @include media-breakpoint-down(sm) {
+              left: -2px;
+            }
+
+            img {
+              width: 292px;
+              aspect-ratio: 1.32 / 1;
+
+              @include media-breakpoint-down(sm) {
+                width: 164px;
+              }
+            }
+          }
+        }
+      }
+
+      //   Style List Heading
+      &__title {
+        color: $color-dark-blue;
+      }
+    }
+  }
+}
+
+// Section Our Team Styling
+// Our Team Ornament Styling
+.about-team-section {
+  position: relative;
+
+  .about-team-ornament {
+    position: absolute;
+    z-index: -1;
+    top: 172px;
+    left: 57%;
+    transform: translateX(-50%);
+    width: 1714.5px;
+    height: 816px;
+    background-image: url(../../media/images/About-V1-Ornament-Value.svg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// Our Team Content Styling
+.about-team {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    padding: 64px 0;
+  }
+
+  &__btn {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+// About Office Styling
+.about-office {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 64px 0;
+  }
+
+  .about-map-wrap {
+    box-shadow: $shadow-lg;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    padding: 48px 40px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    // Accordion Styling
+    .about-map-accordion-wrap {
+      width: 40%;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+
+      .accordion {
+        .accordion-button {
+          color: $color-dark-blue;
+          border: none;
+
+          &:focus {
+            border: none;
+          }
+
+          &:not(.collapsed) {
+            background-color: unset;
+          }
+
+          &::after {
+            background-image: url(../../media/images/About-V1-Slider.svg);
+            background-size: cover;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .accordion-body {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 33px;
+          padding: 24px 20px;
+
+          .about-map-accordion-text-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+
+            .about-map-body-line {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+            }
+          }
+
+          .about-map-accordion-button-wrap {
+            @include media-breakpoint-down(lg) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .about-map-image-wrap {
+      width: 60%;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+
+      .about-map-image__img {
+        width: 100%;
+        aspect-ratio: 1.31 / 1;
+      }
+    }
+  }
+}
+
+// Footer Minor Adjusments
+.footer-about-v1 {
+  margin-top: -14rem;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 203px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: -7rem;
+  }
+}

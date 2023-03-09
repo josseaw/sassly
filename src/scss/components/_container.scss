@@ -1,0 +1,6 @@
+// Modify container from Bootstrap
+.container {
+  @include media-breakpoint-up(xl) {
+    width: 1100px;
+  }
+}

@@ -1,0 +1,35 @@
+// !!!! Use for Testing
+.header-test {
+  width: 100vw;
+  height: 806px;
+}
+
+// Background Settings
+.header-bg {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 806px;
+  overflow-x: hidden;
+
+  background-size: cover;
+  background-position: left bottom;
+
+  &--v1 {
+    background-image: url(../../media/images/Header-Bg-T1.png);
+  }
+
+  &--v2 {
+    background-image: url(../../media/images/Header-Bg-T2.png);
+  }
+}
+
+// Modif at Jobs V1
+.header-jobs-v1 {
+  height: 690px;
+
+  @include media-breakpoint-down(md) {
+    height: 809px;
+  }
+}

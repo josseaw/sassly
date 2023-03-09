@@ -1,0 +1,184 @@
+// Using <a> tag on html
+.btn {
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  transition: 0.2s;
+  font-family: 'DMSans Bold';
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  // Use this property for styling icon inside button
+  &__icon {
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    background-color: $color-white;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-image: url('../../media/images/arrow-right-purple.svg');
+  }
+
+  &--large {
+    padding: 20px 40px;
+    font-size: toRem(18);
+    line-height: 1.35;
+  }
+
+  &--medium {
+    padding: 16px 32px;
+    font-size: toRem(16);
+    line-height: 1.4;
+  }
+
+  &--small {
+    padding: 12px 24px;
+    font-size: toRem(14);
+    line-height: 1.4;
+  }
+
+  //   Give full purple gradient background
+  &--primary {
+    background-image: $gradient-purple;
+    color: $color-white;
+    transition: 0.2s;
+
+    &:hover {
+      background-image: none;
+      background-color: $color-purple;
+      color: $color-white;
+    }
+  }
+
+  //   Give purple gradient border
+  &--secondary-purple {
+    color: transparent;
+    background-image: $gradient-purple;
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+
+    .btn__icon {
+      background-color: none;
+      background-image: $gradient-purple;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      background: $gradient-purple border-box;
+      -webkit-mask: linear-gradient($color-white 0 0) padding-box, linear-gradient($color-white 0 0);
+      -webkit-mask-composite: xor;
+      -mask-composite: exclude;
+    }
+
+    &:hover {
+      border: none;
+      background: none;
+      background-color: $color-purple;
+      color: $color-white;
+
+      &::before {
+        inset: unset;
+      }
+
+      .btn__icon {
+        background-image: none;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  //   Button with white outline
+  &--secondary-white {
+    color: $color-white;
+    outline: 1px solid $color-white;
+
+    &:hover {
+      outline: none;
+      background-image: none;
+      background-color: $color-purple;
+      color: $color-white;
+    }
+  }
+
+  //   Button with no border, no background color, white text
+  &--transparent-white {
+    color: $color-white;
+    background-color: transparent;
+    font-family: 'DMSans Regular';
+
+    &:hover {
+      color: $color-light-purple;
+      font-family: 'DMSans Regular';
+    }
+  }
+}
+
+// Button used for Login with Icon
+.btn-login {
+  padding: 18px 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: $color-white;
+  text-transform: none;
+
+  &__icon {
+    width: 28px;
+    aspect-ratio: 1 / 1;
+  }
+
+  // Use class text-m-bold for text
+  &__text {
+    color: $color-grey;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
+
+//   Footer Social Media Icon
+.btn-box {
+  padding: 8px;
+  background-color: rgba($color-white, 0.2);
+
+  &__box-icon {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &:hover {
+    background-color: $color-light-purple;
+  }
+}
+
+.btn-back {
+  border-radius: 56px;
+  padding: 0.5em;
+  background-color: $color-white;
+  outline: solid 1px $color-lighter-grey;
+
+  &__icon {
+    width: 24px;
+    aspect-ratio: 1 / 1;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
